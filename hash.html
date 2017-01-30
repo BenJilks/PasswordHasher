@@ -14,18 +14,10 @@
   function hashCode(s) {
     return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
   }
-  function encript(hashed) {
-    var out = "";
-    var asString = "" + hashed;
-    if (var i = 0; i < asString.length; i++) {
-      out += (char)(asString[i] - 24);
-    }
-    return out;
-  }
   
   function hash() {
     var password = document.getElementById("password").value;
     var out = document.getElementById("out");
-    out.innerHTML = encript(hashCode(password));
+    out.innerHTML = hashCode(password);
   }
 </script>
