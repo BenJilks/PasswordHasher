@@ -1,2 +1,3 @@
-# PasswordHasher
-Hash the hash to be hashed
+# Password Hasher
+
+## Hash the hash to be hashed
