@@ -1,3 +1,2 @@
 # Password Hasher
-
-## Hash the hash to be hashed
+Hash the hash to be hashed!
