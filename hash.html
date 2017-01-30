@@ -16,8 +16,9 @@
   }
   function encript(hashed) {
     var out = "";
-    if (var i = 0; i < 4; i++) {
-      out += (char)((hashed >> (j*8)) & 0xFF);
+    var asString = "" + hashed;
+    if (var i = 0; i < asString.length; i++) {
+      out += (char)(asString[i] - 24);
     }
     return out;
   }
