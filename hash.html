@@ -5,7 +5,19 @@
   <body>
     <text>Enter password</text>
     <input type="password" id="password" value="Password123" />
-    <button>Hash!</button>
+    <button onclick="hash()">Hash!</button>
     <p id="out" style="color:red"></p>
   </body>
 </html>
+
+<script>
+  function hashCode(s) {
+    return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+  }
+  
+  function hash() {
+    var password = document.getElementById("password").value;
+    var out = document.getElementById("out");
+    out.innerHTML = hashCode(password);
+  }
+</script>
