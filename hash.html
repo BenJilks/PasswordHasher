@@ -4,7 +4,9 @@
   </header>
   <body>
     <text>Enter password</text>
-    <input type="password" id="password" value="Password123" onchange="hash()" />
+    <input type="password" id="password" value="Password123" onKeyUp="hash()" />
+    <text>Selt: </text>
+    <input id="salt" value="" onKeyUp="hash()" />
     <button onclick="hash()">Hash!</button>
     <p id="out" style="color:red"></p>
   </body>
@@ -21,6 +23,7 @@
   
   function hash() {
     var password = document.getElementById("password").value;
+    password += document.getElementById("salt").value;
     var out = document.getElementById("out");
     out.innerHTML = ecnript(hashCode(password));
   }
